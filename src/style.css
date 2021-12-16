@@ -1,3 +1,54 @@
 h1 {
   color: red;
 }
+.background-card {
+  background: linear-gradient(-20deg, #e9defa 0%, #fbfcdb 100%);
+  border-radius: 10px;
+  border: 1px solid #fffffa;
+}
+
+.lead {
+  background-color: #f7f7f7;
+  padding: 10px;
+  color: grey;
+  width: max-content;
+  border-radius: 15px;
+  font-size: 12px;
+}
+
+.card-title {
+  color: #1f2d61;
+  font-size: 35px;
+  font-weight: 400;
+}
+
+.card-text {
+  font-size: 30px;
+  color: #1f2d61;
+}
+
+.search-bar {
+  border: transparent;
+}
+.card-header {
+  background: linear-gradient(
+    89deg,
+    rgb(253, 220, 155) 26.2%,
+    rgb(255, 215, 165) 48.5%
+  );
+  border-radius: 10px;
+  border: transparent;
+}
+
+.btn-search {
+  background-color: #ffd7a6;
+  border: none;
+}
+
+.bi-search:hover {
+  color: #ebe1fa;
+}
+
+ul {
+  list-style-type: none;
+}
