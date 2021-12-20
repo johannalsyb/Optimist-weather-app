@@ -31,12 +31,8 @@ h1 {
   border: transparent;
 }
 .card-header {
-  background: linear-gradient(
-    89deg,
-    rgb(253, 220, 155) 26.2%,
-    rgb(255, 215, 165) 48.5%
-  );
-  border-radius: 10px;
+  background-color: #c192fa;
+  border-radius: 20px;
   border: transparent;
 }
 
