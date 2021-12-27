@@ -1,8 +1,8 @@
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 480px) {
   .background-card {
     width: 400px;
-    height: 500px;
+    height: 700px;
   }
 }
 
