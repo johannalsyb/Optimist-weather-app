@@ -23,7 +23,6 @@
   <body>
     <div class="container card w-50 background-card">
 
-
       <!-- Hearder -->
       <div class="card d-flex mt-2 search-bar">
         <h5 class="card-header">
@@ -34,7 +33,7 @@
             placeholder="Search a city "
             aria-label="default input example"
           />
-          <button class="btn-search">
+          <button class="btn-search" id="btn">
             <i class="bi bi-search ml-1"></i> 
           </button>
          
@@ -44,64 +43,62 @@
 <!-- body of the card -->
 
  <div class="card-body">
-          <div class="d-flex justify-content-between">
-            <ul class="list-group">
-              <li><h5 class="card-title">San francisco</h5></li>
-            
-              <li> <p class="card-text text-dark" id="temp">
-                25°C
-              </p></li>
-             
-            </ul>
-            <img class="w-25"src="img/undraw_weather_re_qsmd.svg">
-          </div>
-     
-      <div class="weater">
-        <div class="d-flex mt-5">
-           <p class="lead" id="description">Cloudy</p>
-        </div>
-       
-
-       <div class="h4" id="thedate">Today</div>
-     
- <div class="mt-4">
-
-
-  <ul class="d-flex justify-content-around">
-       <ul class="list-group text-center">
-            <li>10am</li>
-            <li> <i class="bi bi-brightness-high"></i></li>
-       </ul>
+                <div class="d-flex justify-content-between">
+                  <ul class="list-group">
+                    <li><h5 class="card-title">Loading...</h5></li>
+                  
+                    <li> <p class="card-text text-dark" id="temp">
+                    
+                    </p></li>
+                  
+                  </ul>
+                  <img class="w-25"src="img/undraw_weather_re_qsmd.svg">
+                </div>
           
-            <ul class="list-group text-center">
-              <li>11am</li>
-              <li><i class="bi bi-cloud"></i></li>
-            </ul>
+            <div class="weater">
+              <div class="d-flex mt-5">
+                <p class="lead" id="description">Cloudy</p>
+              </div>
+            </div>
+
+            <div class="h4" id="thedate">Today</div>
+          
         
-            <ul class="list-group text-center">
-              <li>12pm</li>
-              <li><i class="bi bi-cloud"></i></li>
-            </ul>
-          
-            <ul class="list-group text-center">
-              <li>1pm</li>
-              <li><i class="bi bi-cloud "></i></li>
-            </ul>
-      </ul>
- </div>
-   
-          </div>
-        </ul>
-  
-     
-        </div>
-      </div>
-    </div>
-  </div>
-  
 
-   
-    <script src="src/app.js"></script>
+    <ul class="container d-flex text-xs-center"> 
+         <div class="row col-lg-12 col-sm-6">
+              <div class="col-lg-3">
+                 <ul class="list-group text-center">
+                    <li>10am</li>
+                     <li> <i class="bi bi-brightness-high"></i></li>
+                </ul>  
+              </div>
+              
+              <div class="col-lg-3">
+                 <ul class="list-group text-center">
+                    <li>10am</li>
+                     <li> <i class="bi bi-brightness-high"></i></li>
+                 </ul>      
+              </div>
+              
+              <div class="col-lg-3">
+                 <ul class="list-group text-center">
+                    <li>11am</li>
+                     <li><i class="bi bi-cloud"></i></li>
+                   </ul>
+               </div>
+
+              <div class="col-lg-3">
+                <ul class="list-group text-center">
+                   <li>12pm</li>
+                   <li><i class="bi bi-cloud"></i></li>
+                </ul>
+           </div>
+         </div>
+      </ul>
+  </div>
+</div>                                 
+       <script src="src/app.js"></script>
   </body>
 </html>
 

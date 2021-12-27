@@ -14,6 +14,8 @@ displayDate.innerHTML = `Today is ${monthName}  ${day}`;
 let position = navigator.geolocation.getCurrentPosition;
 
 
+
+
 function handlePosition(position) {
     var lat = position.coords.latitude;
     var lng = position.coords.longitude;  
@@ -40,9 +42,44 @@ function handleData(response){
  let detail = document.querySelector("#description");
  detail.innerHTML = description;
 }
+navigator.geolocation.getCurrentPosition(handlePosition)
+
+
+// 1- Assign a click event listener to the search button.
+// 2- When its clicking take the input and store it on a variable.
+// 3- Send this input to the API request (new URL)
+// 4- Then I call the function with the response.
 
 
 
-  navigator.geolocation.getCurrentPosition(handlePosition)
+document.getElementById("btn").addEventListener("click", myFunction);
+
+function myFunction(event) {
+let input = document.querySelector(".form-control").value;
+let newQuery = document.querySelector(".card-title");
+newQuery.innerHTML = input;
+let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${input}&units=metric&appid=${apiKey}`;
+axios.get(apiUrl).then(showDataNewQuery);
+}
+
+const showDataNewQuery = response => {
+    console.log(response);
+    let newTempQuery = Math.round(response.data.main.temp)
+    let currentTemp = document.querySelector("#temp");
+    currentTemp.innerHTML = newTempQuery+"°C";
+    var element = document.querySelector(".background-card");
+    if (newTempQuery < 10){
+        element.classList.add("dark-background");
+    } else {  element.classList.remove("dark-background");
+    }
+
+
+    //put the weather innerHHTYML of descruiption...
+};
+
+// get the temp from response 
+// if this temp is lower than 10
+// remove the old backgroud
+// add the new background 
 
 
