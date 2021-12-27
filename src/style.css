@@ -1,7 +1,22 @@
+
+@media only screen and (max-width: 500px) {
+  .background-card {
+    width: 400px;
+  }
+}
+
+
+@media only screen and (min-width: 800px) {
+  .background-card {
+    width: 600px;
+  }
+}
+
 .background-card {
   background: linear-gradient(-20deg, #e9defa 0%, #fbfcdb 100%);
   border-radius: 10px;
   border: 1px solid #fffffa;
+ 
 }
 
 .dark-background {
