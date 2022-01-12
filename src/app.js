@@ -29,19 +29,19 @@ function showData(lat,lng) {
 }
 
 function handleData(response){
-  var city = response.data.name;
-
+    
+  const city = response.data.name;
   var tempCity = Math.round(response.data.main.temp);
   let h1 = document.querySelector(".card-title");
  h1.innerHTML = response.data.name;
 
  let temperature = document.querySelector("#temp");
- temperature.innerHTML = `${tempCity}°C`;
-  
- let description = response.data.weather[0].description;
- let detail = document.querySelector("#description");
- detail.innerHTML = description;
+  temperature.innerHTML = `${tempCity}°C`;
+    
 }
+
+
+
 navigator.geolocation.getCurrentPosition(handlePosition)
 
 
@@ -63,23 +63,45 @@ axios.get(apiUrl).then(showDataNewQuery);
 }
 
 const showDataNewQuery = response => {
-    console.log(response);
+    
     let newTempQuery = Math.round(response.data.main.temp)
     let currentTemp = document.querySelector("#temp");
     currentTemp.innerHTML = newTempQuery+"°C";
     var element = document.querySelector(".background-card");
-    if (newTempQuery < 10){
+   var header = document.querySelector(".card-header");
+   var seach = document.querySelector(".search-bar")
+
+   
+    element.classList.remove("dark-background");
+    element.classList.remove("warm-background");
+    if (newTempQuery < 5 ){
         element.classList.add("dark-background");
-    } else {  element.classList.remove("dark-background");
+    } else if(newTempQuery > 20) {
+        element.classList.add("warm-background");
+        header.classList.remove("card-header");
+        header.classList.add("card-header-warm");
     }
+    
+    let queryDescription = response.data.weather[0].description ;
+    let displayDescription = document.querySelector("#description");
+    displayDescription.innerHTML = queryDescription;
+    var icons = document.querySelectorAll(".icoins");
+     
+    icons.forEach(element => {
+        if (newTempQuery < 0 ){
+            element.setAttribute("src", "img/snow.png")
+        }
+        if(newTempQuery > 20){
+            element.setAttribute("src","img/sun.png")
+        }
 
-
-    //put the weather innerHHTYML of descruiption...
+    });
 };
 
-// get the temp from response 
-// if this temp is lower than 10
-// remove the old backgroud
-// add the new background 
-
-
+// var icons = document.querySelector(".icoins");
+//     for (let i = 0; i <= icons.length - 1; i++){
+//       if (newTempQuery < 0 ){
+//       icons[i].setAttribute("src", "img/snow.png")
+//       }
+    
+//     }
