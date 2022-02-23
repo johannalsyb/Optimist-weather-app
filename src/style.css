@@ -7,9 +7,14 @@
     font-size: 25px;
   }
   #thedate{
-    font-size: 30px !important;
+    font-size: 20px !important;
     margin-top: 10px;
   }
+  .card-title {
+    
+    font-size: 28px;
+   
+}
 }
 
 @media only screen and (min-width: 800px) {
