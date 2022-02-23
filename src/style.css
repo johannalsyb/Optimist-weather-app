@@ -52,9 +52,9 @@
 }
 
 #description {
-  background-color: #f7f7f7;
+  
   padding: 10px;
-  color: grey;
+  color: #272045;
   width: max-content;
   border-radius: 15px;
   font-size: 18px;
@@ -66,6 +66,8 @@
   font-size: 35px;
   font-weight: 500;
   text-transform: lowercase;
+  font-family: 'Martel Sans', sans-serif;
+
 }
 
 
@@ -75,7 +77,7 @@
 
 .card-text {
   font-size: 40px;
-  color: #1f2d61;
+  color: #272045;
 }
 
 .search-bar {
@@ -106,7 +108,7 @@ ul {
 #thedate {
   font-size: 20px;
   margin-bottom: 10px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .row {
@@ -130,4 +132,5 @@ ul {
 
 p#temp.text-dark{
   font-size: 60px;
+  color: #272045;
 }
