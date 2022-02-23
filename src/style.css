@@ -1,7 +1,7 @@
 @media only screen and (max-width: 480px) {
   .background-card {
-    width: 400px;
-    height: 900px;
+    width: 375px;
+    height: 667px;
   }
   #bigger-mobile-text {
     font-size: 25px;
