@@ -15,6 +15,13 @@
     font-size: 28px;
    
 }
+.card-header {
+  max-width: 311px;
+    align-self: center;
+}
+
+
+
 }
 
 @media only screen and (min-width: 800px) {
