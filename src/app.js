@@ -71,6 +71,8 @@ const showDataNewQuery = response => {
     var header = document.querySelector(".card-header");
     var search = document.querySelector(".search-bar");
     let tempFirstDay = document.querySelector("#dayplusone");
+    let mat = currentTemp.value; 
+    console.log(mat)
     console.log(tempFirstDay)
     
     let queryDescription = response.data.weather[0].description;
