@@ -63,14 +63,15 @@ function myFunction(event) {
 }
 
 const showDataNewQuery = response => {
-  console.log(response)
+ 
     let newTempQuery = Math.round(response.data.main.temp)
     let currentTemp = document.querySelector("#temp");
     currentTemp.innerHTML = newTempQuery + "°C";
     var element = document.querySelector(".background-card");
     var header = document.querySelector(".card-header");
     var search = document.querySelector(".search-bar");
-    
+    let tempFirstDay = document.querySelector("#dayplusone");
+    console.log(tempFirstDay)
     
     let queryDescription = response.data.weather[0].description;
     let displayDescription = document.querySelector("#description");
@@ -88,7 +89,7 @@ const showDataNewQuery = response => {
     displayDescription.innerHTML = queryDescription;
     
    iconElements = document.querySelectorAll(".icon");
-   console.log(response)
+  
    iconElements.forEach(element => {
      element.setAttribute("src", `https://openweathermap.org/img/wn/${response.data.weather[0].icon}.png`);
    });
