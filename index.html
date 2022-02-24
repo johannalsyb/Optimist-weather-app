@@ -12,7 +12,7 @@
       crossorigin="anonymous"
     />
     <!-- Option 1: Include in HTML -->
-  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Martel+Sans:wght@700&family=Montserrat:wght@500&display=swap" rel="stylesheet">
@@ -35,8 +35,8 @@
             placeholder="Search a city "
             aria-label="default input example"
           />
-          <button class="btn-search" id="btn">
-            <i class="bi bi-search ml-1"></i> 
+          <button class="btn-search " id="btn">
+            <i class="bi bi-search"></i>
           </button>
          
         </h5>
@@ -45,14 +45,21 @@
 <!-- body of the card -->
 
  <div class="card-body">
-   <div class="div-size">
-      <div  id="thedate">Today</div>
-   </div>
+
+  <button type="button" class="btn btn-primary mb-3">
+    <div  id="thedate">Today</div>
+  </button>
+
   
                 <div class="d-flex justify-content-between">
                   <!-- <ul class="list-group"> -->
-                    <li style="list-style-type: none;"><h5 class=" card-title">Loading...</h5></li>
+                    <div class="d-flex">
+                      <div class="spinner-border text-primary" role="status">
+                      <span class="sr-only "></span>
+                    </div><li style="list-style-type: none;"><h5 class="card-title mx-3">Loading...</h5></li>
                   
+                    </div>
+                    
                     <li style="list-style-type: none;"> <p class="text-dark" id="temp">
                     
                     </p>
@@ -62,55 +69,52 @@
                   <img class="image"src="img/undraw_weather_re_qsmd.svg">
                 </div>
           
-            <div class="weater">
+        
+        <div class="justify-content-center">
+          <ul class="list-group list-group-horizontal w-25">
+              <li class="list-group-item bg-light">Morning
+              <img class="icon">  
+              </li>
+              <li class="list-group-item bg-light"> Afternoon
+                <img class="icon"> 
+                 </li>
+              <li class="list-group-item bg-light">Evening
+                <img class="icon"> 
+              </li> 
+            </ul>
+        </div>
+            
+
+                 <div class="weater">
               <div class="d-flex mt-5">
+              
                 <p class="lead" id="description"></p>
               </div>
             </div>
           
-            
-          
-        
-
-    <ul class="container d-flex text-xs-center " id="bigger-mobile-text"> 
-         <div class="row col-lg-12 col-sm-6">
-              <div class="col-lg-3">
-                 <ul class="list-group text-center">
-                    <li>10am</li>
-                     <li> 
-                       <img 
-                       class="icon"
-                       src="img/cloud.png"
-                    
-                       ></li>
-                </ul>  
-              </div>
-              
-              <div class="col-lg-3">
-                 <ul class="list-group text-center">
-                    <li>10am</li>
-                     <li> <img class="icon" src="img/cloud.png"
-                     ></li>
-                 </ul>      
-              </div>
-              
-              <div class="col-lg-3">
-                 <ul class="list-group text-center">
-                    <li>11am</li>
-                     <li><img class="icon" src="img/cloud.png"></li>
-                   </ul>
-               </div>
-
-              <div class="col-lg-3">
-                <ul class="list-group text-center">
-                   <li>12pm</li>
-                   <li><img class="icon" src="img/cloud.png"></li>
-                </ul>
-           </div>
          </div>
       </ul>
-  </div>
-</div>                                 
+
+<div class="d-flex container-fluid ">
+        <div class="card text-white bg-secondary row " style="max-width: 160px; max-height: 300px;">
+        <div class="mx-2">Monday</div>
+        <div class="card-body">
+          <h5 class="text">Secondary card title</h5>
+          <p class="text">Some quick example text to build on t</p>
+        </div>
+
+        <div class="card text-white bg-secondary mt-2 row " style="max-width: 160px; max-height: 300px;">
+          <div class="mx-2">Monday</div>
+          <div class="card-body">
+            <h5 class="text">Secondary card title</h5>
+            <p class="text">Some quick example text to </p>
+          </div>
+        </div>
+      </div>   
+</div>
+   
+      
+
        <script src="src/app.js"></script>
   </body>
 </html>
