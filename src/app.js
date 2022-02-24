@@ -63,7 +63,7 @@ function myFunction(event) {
 }
 
 const showDataNewQuery = response => {
-  
+  console.log(response)
     let newTempQuery = Math.round(response.data.main.temp)
     let currentTemp = document.querySelector("#temp");
     currentTemp.innerHTML = newTempQuery + "°C";
@@ -88,7 +88,7 @@ const showDataNewQuery = response => {
     displayDescription.innerHTML = queryDescription;
     
    iconElements = document.querySelectorAll(".icon");
-   console.log(response.data.weather[0].icon)
+   console.log(response)
    iconElements.forEach(element => {
      element.setAttribute("src", `https://openweathermap.org/img/wn/${response.data.weather[0].icon}.png`);
    });
