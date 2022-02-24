@@ -4,12 +4,14 @@ const apiKey = "918b8d9899bdd33b4c0152c02d23b5f9";
 var today = new Date();
 var monthNumber = (today.getMonth() + 1)
 var day = today.getDate();
+var jour = ["Sun", "Mon", "Tue", "Wed", "Thursday", "Fri", "Sat"]
+var jourName = jour[today.getDay()]
 
 var months = ["Janv", "Fev", "Mars", "April", "May", "June", "July", "Aug", "Sep", "Oct", "Nov", "Dec"]
 var monthName = months[today.getMonth()]
 
 let displayDate = document.querySelector("#thedate")
-displayDate.innerHTML = `${monthName}  ${day}`;
+displayDate.innerHTML = `${jourName}, ${day} ${monthName} `;
 
 let position = navigator.geolocation.getCurrentPosition;
 
@@ -79,6 +81,18 @@ const showDataNewQuery = response => {
     let resultSday = newTempQuery - 4 ;
     tempSday.innerHTML = `${resultSday}°C`;
 
+    let tempTday = document.querySelector("#dayplust");
+    let resultTday = newTempQuery - 1 ;
+    tempTday.innerHTML = `${resultTday}°C`;
+
+
+    let tempFday = document.querySelector("#dayplusf");
+    let resultFday = newTempQuery + 1 ;
+    tempFday.innerHTML = `${resultFday}°C`;
+    
+    let firstDayDasboard = document.querySelector("#firstDay");
+    let AccurateFirstDay = jourName.length(+1);
+    console.log(AccurateFirstDay);
 
 
     let queryDescription = response.data.weather[0].description;
