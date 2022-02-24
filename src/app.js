@@ -76,7 +76,7 @@ const showDataNewQuery = response => {
     tempFirstDay.innerHTML = `${resultFirstDay}°C`;
    
     let tempSday = document.querySelector("#dayplustwo");
-    let resultSday = newTempQuery - (-2);
+    let resultSday = newTempQuery - 4 ;
     tempSday.innerHTML = `${resultSday}°C`;
 
 
