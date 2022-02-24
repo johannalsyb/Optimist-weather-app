@@ -70,11 +70,14 @@ const showDataNewQuery = response => {
     var element = document.querySelector(".background-card");
     var header = document.querySelector(".card-header");
     var search = document.querySelector(".search-bar");
+    
     let tempFirstDay = document.querySelector("#dayplusone");
     let resultFirstDay = newTempQuery + 2 ;
-    tempFirstDay.innerHTML = `${resultFirstDay} °C`;
+    tempFirstDay.innerHTML = `${resultFirstDay}°C`;
    
-
+    let tempSday = document.querySelector("#dayplustwo");
+    let resultSday = newTempQuery - (-2);
+    tempSday.innerHTML = `${resultSday}°C`;
 
 
 
