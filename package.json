@@ -1,0 +1,23 @@
+{
+  "name": "optimist-weather-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/johannalsyb/Optimist-weather-app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/johannalsyb/Optimist-weather-app/issues"
+  },
+  "homepage": "https://github.com/johannalsyb/Optimist-weather-app#readme",
+  "dependencies": {
+    "boostrap": "^2.0.0",
+    "bootstrap": "^5.1.3"
+  }
+}

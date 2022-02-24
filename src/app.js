@@ -9,7 +9,7 @@ var months = ["Janv", "Fev", "Mars", "April", "May", "June", "July", "Aug", "Sep
 var monthName = months[today.getMonth()]
 
 let displayDate = document.querySelector("#thedate")
-displayDate.innerHTML = `Today is ${monthName}  ${day}`;
+displayDate.innerHTML = `${monthName}  ${day}`;
 
 let position = navigator.geolocation.getCurrentPosition;
 
