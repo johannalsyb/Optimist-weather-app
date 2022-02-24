@@ -90,11 +90,6 @@ const showDataNewQuery = response => {
     let resultFday = newTempQuery + 1 ;
     tempFday.innerHTML = `${resultFday}°C`;
     
-    let firstDayDasboard = document.querySelector("#firstDay");
-    let AccurateFirstDay = jourName.length(+1);
-    console.log(AccurateFirstDay);
-
-
     let queryDescription = response.data.weather[0].description;
     let displayDescription = document.querySelector("#description");
 
