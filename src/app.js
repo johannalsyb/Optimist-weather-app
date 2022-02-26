@@ -70,9 +70,11 @@ function myFunction(event) {
 const showDataNewQuery = response => {
     
     let unix = response.data.sys.sunrise; 
-    let date = new Date(unix*1000);
-    let re = date.substring(6,10)
-    console.log(re);
+    console.log(unix);
+    let sunriseMath = new Date(unix*1000);
+    let resultSunrise = (sunriseMath.toLocaleTimeString());
+    console.log(resultSunrise);
+
 
     let newTempQuery = Math.round(response.data.main.temp)
     let currentTemp = document.querySelector("#temp");
