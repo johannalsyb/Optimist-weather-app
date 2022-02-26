@@ -6,6 +6,9 @@ var monthNumber = (today.getMonth() + 1)
 var day = today.getDate();
 var jour = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
 var jourName = jour[today.getDay()]
+var hour = today.getHours();
+var min = today.getMinutes();
+var time = hour + ':' + min ;
 
 var months = ["Janv", "Fev", "Mars", "April", "May", "June", "July", "Aug", "Sep", "Oct", "Nov", "Dec"]
 var monthName = months[today.getMonth()]
@@ -65,9 +68,11 @@ function myFunction(event) {
 }
 
 const showDataNewQuery = response => {
-    let sunrise = response.data.sys.sunrise; 
-    var lisibleSunrise = new Date(sunrise * 1000);
-   console.log(lisibleSunrise);
+    
+    let unix = response.data.sys.sunrise; 
+    let date = new Date(unix*1000);
+    let re = date.substring(6,10)
+    console.log(re);
 
     let newTempQuery = Math.round(response.data.main.temp)
     let currentTemp = document.querySelector("#temp");
