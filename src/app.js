@@ -4,7 +4,7 @@ const apiKey = "918b8d9899bdd33b4c0152c02d23b5f9";
 var today = new Date();
 var monthNumber = (today.getMonth() + 1)
 var day = today.getDate();
-var jour = ["Sun", "Mon", "Tue", "Wed", "Thursday", "Fri", "Sat"]
+var jour = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
 var jourName = jour[today.getDay()]
 
 var months = ["Janv", "Fev", "Mars", "April", "May", "June", "July", "Aug", "Sep", "Oct", "Nov", "Dec"]
@@ -65,7 +65,7 @@ function myFunction(event) {
 }
 
 const showDataNewQuery = response => {
- 
+    console.log(response.data.sys.sunrise)
     let newTempQuery = Math.round(response.data.main.temp)
     let currentTemp = document.querySelector("#temp");
     currentTemp.innerHTML = newTempQuery + "°C";
@@ -92,7 +92,17 @@ const showDataNewQuery = response => {
     
     let firstDayDasboard = document.querySelector("#firstDay");
     let AccurateFirstDay = today.getDay() + 1;
-    console.log(jour[AccurateFirstDay]);
+    let AccurateNameDay = (jour[AccurateFirstDay]);
+    firstDayDasboard.innerHTML = AccurateNameDay;
+
+
+
+    let SecondDayDasboard = document.querySelector("#secondday");
+    let AccurateSecondDay = today.getDay() + 1;
+    let AccurateSNameDay = (jour[AccurateSecondDay]);
+    SecondDayDasboard.innerHTML = AccurateSNameDay;
+
+
 
 
     let queryDescription = response.data.weather[0].description;
