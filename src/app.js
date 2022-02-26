@@ -70,10 +70,27 @@ function myFunction(event) {
 const showDataNewQuery = response => {
     
     let unix = response.data.sys.sunrise; 
-    console.log(unix);
+    
     let sunriseMath = new Date(unix*1000);
     let resultSunrise = (sunriseMath.toLocaleTimeString());
     console.log(resultSunrise);
+    let domSunrise = document.querySelector("#sunrise");
+    domSunrise.innerHTML = resultSunrise;
+    sunrise.setAttribute("class", "bi bi-sunrise");
+    domSunrise.innerHTML = resultSunrise;
+
+   
+    let unixdeux = response.data.sys.sunset; 
+    let sunsetMath = new Date(unixdeux*1000);
+    let resultSunset = (sunsetMath.toLocaleTimeString());
+    console.log(resultSunset);
+    let domSunset = document.querySelector("#sunset");
+    sunset.setAttribute("class", "bi bi-sunset");
+    domSunset.innerHTML = resultSunset;
+   
+
+
+
 
 
     let newTempQuery = Math.round(response.data.main.temp)

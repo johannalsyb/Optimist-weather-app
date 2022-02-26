@@ -69,16 +69,7 @@ $theme-colors: (
   .warm-background {
     background: linear-gradient(135deg, rgb(255, 168, 168) 10%, rgb(252, 255, 0) 100%);
   }
-  
-  #description {
-    
-    padding: 10px;
-    color: #272045;
-    width: max-content;
-    border-radius: 15px;
-    font-size: 18px;
-    text-transform: capitalize;
-  }
+
   
   .card-title {
     color: #6647ff;
@@ -166,3 +157,6 @@ $theme-colors: (
     
   }
   
+#sunrise {
+  margin-right: 41px;
+  }
