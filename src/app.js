@@ -65,7 +65,10 @@ function myFunction(event) {
 }
 
 const showDataNewQuery = response => {
-    console.log(response.data.sys.sunrise)
+    let sunrise = response.data.sys.sunrise; 
+    var lisibleSunrise = new Date(sunrise * 1000);
+   console.log(lisibleSunrise);
+
     let newTempQuery = Math.round(response.data.main.temp)
     let currentTemp = document.querySelector("#temp");
     currentTemp.innerHTML = newTempQuery + "°C";
